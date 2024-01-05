@@ -1,0 +1,80 @@
+
+<br/>
+<div class="row justify-content-center">
+    <div class="col-md-10">
+        <div class="card">
+            <div class="card-header">Add Hotel</div>
+            <div class="card-body">
+                <form [formGroup]="hotelForm" (ngSubmit)="hotel()">
+                    <div class="form-group row">
+                        <label  class="col-md-4 col-form-label text-md-right">Hotel Name</label>
+                        <div class="col-md-6">
+                            <input formControlName="name" type="text" id="name" class="form-control" name="name" required>
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="form-group row">
+                        <label for="email_address" class="col-md-4 col-form-label text-md-right">Description</label>
+                        <div class="col-md-6">
+                            <input formControlName="description" type="text" id="description" class="form-control" name="description" required>
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="form-group row">
+                        <label  class="col-md-4 col-form-label text-md-right">Image</label>
+                        <div class="col-md-6">
+                            <input formControlName="image" type="file" class="form-control" name="image" (change)="uploadImage($event)" required>
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="form-group row">
+                        <label class="col-md-4 col-form-label text-md-right">Min Price</label>
+                        <div class="col-md-6">
+                            <input formControlName="min_price" type="number" id="min_price" class="form-control" name="min_price" required>
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="form-group row">
+                        <label class="col-md-4 col-form-label text-md-right">Max Price</label>
+                        <div class="col-md-6">
+                            <input formControlName="max_price" type="number" id="max_price" class="form-control" name="max_price" required>
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="form-group row">
+                        <label class="col-md-4 col-form-label text-md-right">Availability Status</label>
+                        <div class="col-md-6">
+                            <select formControlName="status" name="status" class="form-control" required>
+                                <option value="">Select</option>
+                                <option>Available</option>
+                                <option>Unavailable</option>
+                            </select>
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="form-group row">
+                        <label class="col-md-4 col-form-label text-md-right">Category</label>
+                        <div class="col-md-6">
+                            <select formControlName="category" name="category" class="form-control" required>
+                                <option value="">Select</option>
+                                <option>delux</option>
+                                <option>non delux</option>
+                            </select>
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="form-group row">
+                        <div class="col-md-4"></div>
+                        <div class="col-md-6">
+                            <button type="submit" class="btn btn-primary">
+                                Submit
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+

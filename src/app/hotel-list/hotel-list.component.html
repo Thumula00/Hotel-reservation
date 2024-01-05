@@ -1,0 +1,28 @@
+<br/>
+<div class="row">
+    <div class="col-12">
+        <input type="text" class="form-control" [(ngModel)]="search_hotel" placeholder="Search"/>
+    </div>
+</div>
+<div class="row">
+    <div class="col-2"></div>
+    <div class="col-12">
+        <div class="row">
+            <div class="col-3" *ngFor="let hotel of hotels | filter:search_hotel">
+                <br/>
+                <div class="card" style="width: 18rem;">
+                    <img src="{{API}}/{{hotel.image}}" >
+                    <div class="card-body">
+                        <h3 class="cord-title">{{hotel.name}}</h3>
+                        <h4 class="cord-title">{{hotel.category}}</h4>
+                        <h5 class="cord-title">Min {{hotel.minPrice}} - Max {{hotel.maxPrice}}</h5>
+                        <h5 class="cord-title">Availability : {{hotel.status}}</h5>
+                        <p class="card-text">{{hotel.description}}</p>
+                        <a [routerLink]="['/book', hotel._id]" class="btn btn-success">Book</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,33 @@
+<div class="row" *ngFor="let book of books">
+    <div class="col-12">
+        <br/>
+        <div class="row">
+            <div class="col-4">
+                <div  class="card">
+                    <img src="http://localhost:5000/{{book.image}}">
+                </div>
+            </div>
+            <div class="col-3">
+                <h4>{{book.name}}</h4>
+                <h5>Rs. {{book.minPrice}} - Rs. {{book.maxPrice}}</h5>
+                <h5>Status : {{book.status}}</h5>
+                <h5>Category : {{book.category}}</h5>
+                <p>{{book.description}}</p>
+                <h5>Rooms : {{book.temp_data.rooms}}</h5>
+                <h5>Date : {{book.temp_data.adate}} - {{book.temp_data.ddate}}</h5>
+                <h5>{{book.temp_data.ac}}</h5>
+            </div>
+            <div class="col-3">
+                <a class="btn btn-primary" [routerLink]="['/edit_book', book.temp_data._id]" >
+                    Edit
+                </a>
+            </div>
+            <div class="col-2">
+                <button type="submit" class="btn btn-danger" (click)="removeBook(book.temp_data._id)" >
+                    Remove
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<br/>

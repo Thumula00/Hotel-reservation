@@ -1,0 +1,75 @@
+
+<br/>
+<div class="row justify-content-center">
+    <div class="col-md-10">
+        <div class="card">
+            <div class="card-header">Book</div>
+            <div class="card-body">
+                <form [formGroup]="bookForm" (ngSubmit)="book()">
+                    <div class="form-group row">
+                        <label  class="col-md-4 col-form-label text-md-right">Hotel ID</label>
+                        <div class="col-md-6">
+                            <input formControlName="hid" type="text" id="hid" class="form-control" name="hid" readonly required>
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="form-group row">
+                        <label class="col-md-4 col-form-label text-md-right">Rooms</label>
+                        <div class="col-md-6">
+                            <select formControlName="rooms" name="rooms" class="form-control" required>
+                                <option value="">Select</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                                <option>7</option>
+                                <option>8</option>
+                                <option>9</option>
+                                <option>10</option>
+                            </select>
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="form-group row">
+                        <label for="email_address" class="col-md-4 col-form-label text-md-right">Arrival Date</label>
+                        <div class="col-md-6">
+                            <input formControlName="adate" type="date" id="adate" class="form-control" name="adate" required>
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="form-group row">
+                        <label for="email_address" class="col-md-4 col-form-label text-md-right">Departure Date</label>
+                        <div class="col-md-6">
+                            <input formControlName="ddate" type="date" id="ddate" class="form-control" name="ddate" required>
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="form-group row">
+                        <label class="col-md-4 col-form-label text-md-right">A/C & Non A/C</label>
+                        <div class="col-md-6">
+                            <select formControlName="ac" name="ac" class="form-control" required>
+                                <option value="">Select</option>
+                                <option>A/C</option>
+                                <option>Non A/C</option>
+                            </select>
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="form-group row">
+                        <div class="col-md-4"></div>
+                        <div class="col-md-6">
+                            <button type="submit" class="btn btn-primary">
+                                Submit
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

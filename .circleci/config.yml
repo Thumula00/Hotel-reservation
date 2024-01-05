@@ -1,0 +1,38 @@
+version: 2.1
+orbs:
+  heroku: circleci/heroku@2.0
+jobs:
+  testing:
+    docker:
+      - image: cimg/node:lts
+        auth:
+          username: $DOCKERHUB_USERNAME
+          password: $DOCKERHUB_PASSWORD
+    steps:
+      - checkout
+      - run:
+          name: Install Angular CLI
+          command: npm install -g @angular/cli
+      - run:
+          name: Install dependencies
+          command: npm install
+      - run:
+          name: Build the application
+          command: ng build
+  deploy:
+    executor: heroku/default
+    steps:
+      - checkout
+      - heroku/install
+      - heroku/deploy-via-git
+      - run:
+          name: Check deployment status
+          command: |
+            heroku ps --app $HEROKU_APP_NAME
+workflows:
+  heroku_deploy:
+    jobs:
+      - testing
+      - deploy:
+          requires:
+            - testing
