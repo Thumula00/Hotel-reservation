@@ -7,14 +7,14 @@
                 <div class="card-body">
                     <form [formGroup]="loginForm" (ngSubmit)="login()">
                         <div class="form-group row">
-                            <label for="email_address" class="col-md-4 col-form-label text-md-right">Email</label>
+                            <label for="email_address" class="col-md-4 col-form-label text-md-right">Enter Email</label>
                             <div class="col-md-6">
                                 <input formControlName="email" type="text" id="email" class="form-control" name="email">
                             </div>
                         </div>
                         <br/>
                         <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">Password</label>
+                            <label for="password" class="col-md-4 col-form-label text-md-right">Enter Password</label>
                             <div class="col-md-6">
                                 <input formControlName="password" type="password" id="password" class="form-control" name="password">
                             </div>
@@ -24,7 +24,7 @@
                             <div class="col-md-4"></div>
                             <div class="col-md-6">
                                 <button type="submit" class="btn btn-primary">
-                                    Login
+                                    Login here
                                 </button>
                             </div>
                         </div>
