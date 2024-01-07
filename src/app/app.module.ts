@@ -18,6 +18,7 @@ import { HotelListComponent } from './hotel-list/hotel-list.component';
 import { MyBookComponent } from './my-book/my-book.component';
 import { EditBookComponent } from './edit-book/edit-book.component';
 import { AllBookComponent } from './all-book/all-book.component';
+import { SpecialOffersComponent } from './special-offers/special-offers.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { AllBookComponent } from './all-book/all-book.component';
     HotelListComponent,
     MyBookComponent,
     EditBookComponent,
-    AllBookComponent
+    AllBookComponent,
+    SpecialOffersComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,17 @@
+/* special-offers.component.css */
+.special-offers {
+  margin-top: 20px;
+  background-color: #e42121;
+}
+
+.offer-card {
+  border: 1px solid #e42121;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+.offer-card h3 {
+  margin-top: 0;
+}
+
+/* Add more CSS styles as needed */
