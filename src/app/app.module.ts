@@ -20,6 +20,7 @@ import { EditBookComponent } from './edit-book/edit-book.component';
 import { AllBookComponent } from './all-book/all-book.component';
 import { SpecialOffersComponent } from './special-offers/special-offers.component';
 import { EventsComponent } from './events/events.component';
+import { ReviewsComponent } from './reviews/reviews.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { EventsComponent } from './events/events.component';
     EditBookComponent,
     AllBookComponent,
     SpecialOffersComponent,
-    EventsComponent
+    EventsComponent,
+    ReviewsComponent
   ],
   imports: [
     BrowserModule,
