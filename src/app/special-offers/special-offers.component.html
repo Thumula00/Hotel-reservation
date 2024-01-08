@@ -1,11 +1,19 @@
 <div class="special-offers">
   <h2>Special Offers and Discounts</h2>
   <div *ngFor="let offer of specialOffers" class="offer-card">
-    <h3>{{ offer.title }}</h3>
-    <p>{{ offer.description }}</p>
-    <p>Discount: {{ offer.discount }}</p>
-    <p>Date: {{offer.date }}</p>
-    <!-- You can add more details or buttons for users to avail offers -->
+    <div class="offer-image">
+      <img [src]="offer.image" alt="{{ offer.title }}">
+    </div>
+    <div class="offer-details">
+      <h3>{{ offer.title }}</h3>
+      <p>{{ offer.description }}</p>
+      <p>Discount: <span class="discount">{{ offer.discount }}</span></p>
+      <p>Date: <span class="date">{{ offer.date }}</span></p>
+      <div class="details-btn">
+        <button>Avail Offer</button>
+        <button>More Details</button>
+      </div>
+    </div>
     <hr>
   </div>
 </div>
