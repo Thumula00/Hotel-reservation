@@ -21,6 +21,7 @@ import { AllBookComponent } from './all-book/all-book.component';
 import { SpecialOffersComponent } from './special-offers/special-offers.component';
 import { EventsComponent } from './events/events.component';
 import { ReviewsComponent } from './reviews/reviews.component';
+import { FaqComponent } from './faq/faq.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { ReviewsComponent } from './reviews/reviews.component';
     AllBookComponent,
     SpecialOffersComponent,
     EventsComponent,
-    ReviewsComponent
+    ReviewsComponent,
+    FaqComponent
   ],
   imports: [
     BrowserModule,
