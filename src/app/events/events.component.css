@@ -1,0 +1,82 @@
+.events-container {
+  background-color: #f0f0f0; /* Set the desired background color */
+  padding: 20px; /* Adjust padding as needed */
+  border-radius: 8px; /* Add rounded corners for aesthetics */
+}
+
+h2 {
+  color: #333; /* Set the color for the heading */
+  font-size: 28px; /* Adjust font size as per design */
+  margin-bottom: 20px; /* Create space between heading and event grid */
+}
+
+.event-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+li:hover {
+  transform: scale(1.05);
+}
+
+.events-container {
+  margin: 20px;
+}
+
+.event-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.event-item {
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+  background-color: #fff;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+  }
+  40% {
+      transform: translateY(-15px);
+  }
+  60% {
+      transform: translateY(-10px);
+  }
+}
+
+.bounce {
+  animation: bounce 1s ease-in-out;
+}
+
+
+.event-content {
+  position: relative;
+}
+
+.event-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.event-details {
+  padding: 15px;
+  color: #333; /* Adjust text color for better readability */
+}
+

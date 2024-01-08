@@ -12,10 +12,13 @@ import { MyBookComponent } from './my-book/my-book.component';
 import { RegisterComponent } from './register/register.component';
 import { UserComponent } from './user/user.component';
 import { SpecialOffersComponent } from './special-offers/special-offers.component';
+import { EventsComponent } from './events/events.component';
 
 const routes: Routes = [
   { path:'', redirectTo:'hotel_list' , pathMatch:'full' },
-  { path: 'special-offers', component: SpecialOffersComponent },
+  // { path:'special-offers', component: SpecialOffersComponent },
+  {path: 'special-offers', component: SpecialOffersComponent},
+  { path:'events', component: EventsComponent },
   { path:'login', component:LoginComponent },
   { path:'register', component:RegisterComponent },
   { path:'hotel', component:HotelComponent },
